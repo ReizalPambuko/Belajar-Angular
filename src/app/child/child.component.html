@@ -1,0 +1,26 @@
+<div>
+  <div class="container">
+    <!-- <h3>{{ counter }}</h3>
+    <button (click)="incerment()">Incerment</button>
+    <button (click)="decrement()">Decrement</button> -->
+
+    <!-- <button [ngClass]="'btn btn-primary'">NgClass</button>
+    <button [ngClass]="['btn btn-primary']">Array</button>
+    <button [ngClass]="{ btn: true, 'btn-primary': true }">Object</button>
+    <button [ngClass]="getClases()">Get</button>     -->
+
+    <div *ngFor="let item of product" [ngStyle]="{}">
+      <div [ngStyle]="{ backgroundColor: item.stock > 0 ? 'pink' : 'green' }">
+        <p>{{ item.name }}</p>
+        <p>{{ item.price }}</p>
+        <p>{{ item.stock }}</p>
+        <button
+          [disabled]="item.stock === 0"
+          [ngStyle]="{ opacity: item.stock === 0 ? '0.5' : '1' }"
+        >
+          Tambahkan Keranjang
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

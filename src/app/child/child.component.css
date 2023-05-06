@@ -1,7 +1,8 @@
-.specialClass {
+.special {
   background-color: pink;
 }
 
-.defaultClass {
+.btn-primary {
   background-color: aliceblue;
+  color: #000;
 }
