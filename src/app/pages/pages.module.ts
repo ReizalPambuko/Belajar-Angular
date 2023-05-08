@@ -4,11 +4,14 @@ import { UsersModule } from './components/users/users.module';
 import { PagesComponent } from './pages.component';
 
 import { SharedModule } from '../shared/shared.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
   declarations: [
-    PagesComponent
+    PagesComponent,
+    NotFoundComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -17,7 +20,8 @@ import { SharedModule } from '../shared/shared.module';
   ],
   exports: [
     UsersModule,
-    PagesComponent
+    PagesComponent,
+    SharedModule
   ]
 })
 export class PagesModule { }

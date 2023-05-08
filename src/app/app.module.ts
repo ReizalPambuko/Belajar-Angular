@@ -6,6 +6,11 @@ import { HeroComponent } from './hero/hero.component';
 import { PagesModule } from './pages/pages.module';
 import { FormsModule } from '@angular/forms';
 import { ChildComponent } from './child/child.component';
+import { HighlightDirective } from './highlight.directive';
+import { HttpClientModule } from '@angular/common/http';
+import UserService from './pages/components/users/service/user.service';
+import { AppRoutingModule } from './app-routing.module';
+
 
 
 @NgModule({
@@ -13,13 +18,16 @@ import { ChildComponent } from './child/child.component';
     AppComponent,
     HeroComponent,
     ChildComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
     PagesModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

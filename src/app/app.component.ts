@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   titleName = ""
   counter = 0
+  color = ""
+  green = "green"
   ngOnInit(): void {}
 
   greting(){

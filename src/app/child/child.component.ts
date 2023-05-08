@@ -19,6 +19,7 @@ product = [
           name: "Laptop Asus Zenbook",
           brand: "Asus",
           price: 12000000,
+          discount: 0
   },
   {
           id: 2,
@@ -26,6 +27,7 @@ product = [
           name: "Smartphone Samsung Galaxy S21",
           brand: "Samsung",
           price: 13000000,
+          discount: 10
   },
   {
           id: 3,
@@ -33,6 +35,8 @@ product = [
           name: "Smart TV LG OLED",
           brand: "LG",
           price: 15000000,
+          discount: 10
+
   }
 ]
 

@@ -3,19 +3,24 @@
     <thead>
       <tr>
         <th scope="col">ID</th>
-        <th scope="col">FirstName</th>
-        <th scope="col">LastName</th>
-        <th scope="col">Hoby</th>
-        <th scope="col">Job</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Reizal</td>
-        <td>Pambuko</td>
-        <td>Ngoding</td>
-        <td>Frontend Developer</td>
+      <tr *ngFor="let item of users">
+        <th scope="row">{{ item.id }}</th>
+        <td>{{ item.title }}</td>
+        <td>{{ item.body }}</td>
+        <td>
+          <button
+            class="btn btn-primary badge rounded-pill"
+            (click)="gotoUserDetail(item.id)"
+          >
+            Detail
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>
